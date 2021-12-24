@@ -4,7 +4,7 @@
 02 - Obter o endereço do usuário pelo ID
 */
 
-function obterUsuario(callback){
+function obterUsuario(callback){    
     setTimeout(function() {
         return callback(null, {
             id: 1,
@@ -12,6 +12,7 @@ function obterUsuario(callback){
             dataNascimento: new Date()
         })
     }, 1000)
+    console.log('Executou obterUsuario')
 }
 
 function obterTelefone(idUsuario, callback){
@@ -21,6 +22,7 @@ function obterTelefone(idUsuario, callback){
             ddd: 51
         })
     }, 2000);
+    console.log('Executou obterTelefone')
 }
 
 function obterEndereco(idUsuario, callback){
@@ -30,10 +32,7 @@ function obterEndereco(idUsuario, callback){
             numero: 3521
         })
     }, 2000);
-}
-
-function resolverUsuario(erro, usuario){
-    console.log('usuario', usuario)
+    console.log('Executou obterEndereco')
 }
 
 obterUsuario(function resolverUsuario(error, usuario){
@@ -61,6 +60,7 @@ obterUsuario(function resolverUsuario(error, usuario){
             `)
         })
     })
+    console.log('Finalizou obterUsuario')
 })
 
 //const usuario = obterUsuario()
