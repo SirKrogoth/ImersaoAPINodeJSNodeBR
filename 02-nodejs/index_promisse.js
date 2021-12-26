@@ -45,7 +45,10 @@ function obterEndereco(idUsuario, callback){
     console.log('Executou obterEndereco')
 }
 
+console.log('antes const usuarioPromisse = obterUsuario()')
 const usuarioPromisse = obterUsuario()
+console.log('depois const usuarioPromisse = obterUsuario()')
+
 //para manipular o sucesso, usamos a funcao .then
 //para manipular erro, usamos o .catch
 //usuario -> telefone -> endereco
