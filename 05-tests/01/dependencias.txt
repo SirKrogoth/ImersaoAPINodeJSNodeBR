@@ -1,0 +1,5 @@
+npm init -y
+npm i axios
+npm i -g mocha
+npm i --save-dev mocha
+npm i nock
